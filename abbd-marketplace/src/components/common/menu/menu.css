@@ -1,0 +1,24 @@
+.conteneur-menu {
+    display: flex;
+    align-items: center;
+}
+
+.item-menu{
+    font-weight: bold;
+    color:#005294;
+    cursor: pointer;
+}
+
+.actif{
+    color: orangered;
+}
+
+.item-menu:hover{
+    font-weight: bold;
+    color: #3495D9;
+}
+
+.spacer{
+    margin-right: 10px;
+    margin-left: 10px;
+}

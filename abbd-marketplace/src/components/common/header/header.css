@@ -8,16 +8,22 @@
 }
 
 .logo{
-    width:10%;
+    width:14%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .logo img {
-    width: 70%;
+    width: 150px;
     height: 70%;
 }
 
+.menu-header{
+    width: 14%;
+}
+
 .titre {
-    font-size: 3rem;
+    font-size: 54px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     display: flex;

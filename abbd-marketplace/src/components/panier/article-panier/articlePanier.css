@@ -1,0 +1,56 @@
+.article {
+    border: 1px solid red;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.image-article{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding-bottom: 20px;
+    width: 20%;
+}
+
+.image-article img{
+    width: 20%;
+    height: 100%;
+}
+
+.titre-article{
+    color:#3495D9;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    margin: 10px;
+    padding-bottom: 20px;
+    width: 10%;
+}
+
+.description-article{
+    color: #005295;
+    margin: 10px;
+    font-style: italic;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    width: 40%;
+}
+
+.prix-article{
+    margin-top: 20px;
+    color: #3495D9;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 10%;
+}

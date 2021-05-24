@@ -1,26 +1,22 @@
 <template>
-    <div class="panier ">
+    <div class="page-panier ">
         <abbd-header></abbd-header>
+        <abbd-panier></abbd-panier>
     </div>
 </template>
 
 <script>
-    import {mapGetters, mapMutations} from 'vuex'
     import AbbdHeader from "../components/common/header/AbbdHeader";
+    import AbbdPanier from "../components/panier/AbbdPanier";
 
     export default {
         props: {},
         components: {
-            AbbdHeader
+            AbbdHeader,
+            AbbdPanier
         },
         mounted() {
-            if (this.$route.params.id || this.$route.params.id===0) {
-                let partieAChargee = this.parties[this.$route.params.id]
-                this.nomUtilisateur = partieAChargee.nom;
-                this.$store.commit('PartieStore/chargerPartie',partieAChargee);
-            } else {
-                this.chargerNouvellePartie();
-            }
+
         },
         data() {
             return {
@@ -29,52 +25,10 @@
         }
         ,
         methods: {
-            verifierEtSauvegarder(){
-                if(this.nomUtilisateur===''){
-                    alert("nom d'utilisateur obligatoire !")
-                }else{
-                    this.sauvegarderPartie({
-                        score : this.partie.score,
-                        tour:this.partie.tour,
-                        plateau: this.partie.plateau,
-                        nom : this.nomUtilisateur});
-                }
 
-            },
-            lancerUneNouvellePartie() {
-                this.nomUtilisateur = '';
-                this.chargerNouvellePartie();
-            }
-            ,
-            afficherLesproduits() {
-                this.$router.push({
-                    name: 'produits',
-                })
-            }
-            ,
-            ...
-                mapMutations('PartieStore', [
-                        'deplacerLesJetons',
-                        'chargerNouvellePartie'
-                    ]
-                ),
-            ...
-                mapMutations(
-                    'PreferencesStore', [
-                        'sauvegarderPartie',
-                    ]
-                )
         }
         ,
         computed: {
-            ...
-                mapGetters('PartieStore', [
-                    'partie'
-                ]),
-            ...
-                mapGetters('PreferencesStore', [
-                    'parties'
-                ]),
 
         }
     }
@@ -83,9 +37,10 @@
 
 <style lang="css" scoped>
 
-    .panier {
+    .page-panier {
         width: 100%;
         display: flex;
+        flex-direction: column;
     }
 
 

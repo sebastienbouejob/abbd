@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-
 <template>
     <div class="header">
         <div class="logo">
@@ -9,22 +7,26 @@
             <div class="couleur-bleu-fonce">Market</div>
             <div class="couleur-bleu-clair">Place</div>
         </div>
-
+        <div class="menu-header">
+            <abbd-menu></abbd-menu>
+        </div>
     </div>
 </template>
 
 <script>
-    import {mapGetters} from 'vuex'
+
     import './header.css'
+    import AbbdMenu from "../menu/AbbdMenu";
+
 
 
     export default {
         name: 'abbd-header',
         components: {
+            AbbdMenu,
         },
         props: {
-            numeroDeLaColonne:Number,
-            numeroDeLaligne: Number,
+
         },
         data() {
             return {
@@ -35,16 +37,7 @@
 
         },
         computed: {
-            ...mapGetters('PartieStore',[
-                'partie'
-            ]),
-            jeton(){
-                return {
-                    ligne:this.numeroDeLaColonne,
-                    colonne:this.numeroDeLaColonne,
-                    valeur:this.partie.plateau[this.numeroDeLaligne-1][this.numeroDeLaColonne-1]
-                }
-            }
+
         }
     }
 </script>

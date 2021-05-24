@@ -1,14 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex'
-import PartieStore from './stores/partie.store'
-import PreferencesStore from "./stores/preferences.store";
+import MenuStore from "./stores/menu.store";
+import ProduitsStore from "./stores/produits.store";
+import PanierStore from "./stores/panier.store";
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
     modules: {
-        PartieStore,
-        PreferencesStore
+        MenuStore,
+        ProduitsStore,
+        PanierStore
     },
 });
 
