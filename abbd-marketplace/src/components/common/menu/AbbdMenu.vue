@@ -10,7 +10,7 @@
         <div class="item-menu"
              @click="afficherPage (itemPanier)"
              v-bind:class="[ itemPanier.actif ? 'item-menu actif' : 'item-menu']">
-            {{nombreTotalDeProduit ===0 ? "Your cart is empty" : `Cart ( ${nombreTotalDeProduit} article(s))`}}
+            {{`Cart ( ${nombreTotalDeProduit} )`}}
         </div>
     </div>
 </template>
@@ -22,7 +22,7 @@
         name: 'abbd-menu',
         methods: {
             afficherPage(itemMenu) {
-                if(!itemMenu.actif && this.nombreTotalDeProduit>0){
+                if(!itemMenu.actif ){
                     this.$router.push({
                         name: itemMenu.nom
                     })

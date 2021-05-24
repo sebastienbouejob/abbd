@@ -2,8 +2,8 @@
     <div class="liste-articles">
 
         <div class="titre-liste-articles">
-            My Cart
-            <div class="titre-nombre-articles">{{nombreTotalDeProduit}} article(s)</div>
+            {{nombreTotalDeProduit > 0 ? 'My Cart' : ''}}
+            <div class="titre-nombre-articles">{{nombreTotalDeProduit ===0 ? "Your cart is empty" : `Cart ( ${nombreTotalDeProduit} article(s))`}}</div>
         </div>
         <div v-if="produitsPanier.length>0" class="conteneur-article">
             <article-panier v-for="articlePanier in produitsPanier"
