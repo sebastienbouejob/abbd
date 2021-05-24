@@ -7,6 +7,7 @@
 .conteneur-produits{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .titre-liste-produits{
