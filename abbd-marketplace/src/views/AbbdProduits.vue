@@ -8,7 +8,7 @@
 <script>
     import AbbdHeader from "../components/common/header/AbbdHeader";
     import AbbdListeProduits from "../components/liste-produits/AbbdListeProduits";
-    import {mapMutations} from 'vuex'
+    import {mapActions} from 'vuex'
 
 
     export default {
@@ -26,7 +26,7 @@
         },
         methods: {
             ...
-                mapMutations('ProduitsStore', [
+                mapActions('ProduitsStore', [
                         'chargerProduits'
                     ]
                 ),

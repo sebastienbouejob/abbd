@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import {mapMutations} from 'vuex'
+    import {mapActions} from 'vuex'
     import CartPlus from 'vue-material-design-icons/CartPlus.vue';
     import './produit.css'
     export default {
@@ -33,7 +33,7 @@
                 )
             },
 
-            ...mapMutations('PanierStore',[
+            ...mapActions('PanierStore',[
                 'ajouterProduit'
             ]),
 

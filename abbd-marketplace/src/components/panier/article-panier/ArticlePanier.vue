@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import {mapMutations} from 'vuex'
+    import {mapActions} from 'vuex'
     import CartRemove from 'vue-material-design-icons/CartRemove';
     import './articlePanier.css'
     export default {
@@ -29,7 +29,7 @@
                 )
             },
 
-            ...mapMutations('PanierStore',[
+            ...mapActions('PanierStore',[
                 'supprimerDuPanier'
             ]),
 
