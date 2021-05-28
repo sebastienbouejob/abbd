@@ -19,7 +19,7 @@
 
 <script>
     import './liste-produits.css'
-    import {mapGetters, mapMutations} from "vuex";
+    import {mapGetters, mapActions} from "vuex";
     import Produit from "./produit/Produit";
 
     export default {
@@ -31,7 +31,7 @@
             this.chargerProduits
         },
         computed: {
-            ...mapMutations(
+            ...mapActions(
                 'ProduitsStore', ['chargerProduits']
             ),
 

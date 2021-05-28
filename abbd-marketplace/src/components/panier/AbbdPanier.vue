@@ -19,7 +19,7 @@
 
 <script>
     import './panier.css'
-    import {mapGetters, mapMutations} from "vuex";
+    import {mapGetters, mapActions} from "vuex";
     import ArticlePanier from "./article-panier/ArticlePanier";
 
     export default {
@@ -31,7 +31,7 @@
             this.chargerProduits
         },
         computed: {
-            ...mapMutations(
+            ...mapActions(
                 'ProduitsStore', ['chargerProduits']
             ),
 
